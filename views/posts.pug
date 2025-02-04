@@ -40,6 +40,7 @@ html(lang="ja")
             form(method="post" action="/posts/delete")
               input(type="hidden" name="id" value=post.id)
               button(type="submit").btn.btn-outline-danger.btn-sm
+                input(type="hidden" name="oneTimeToken" value=oneTimeToken)
                 i.bi-trash
     div.fixed-bottom.p-4.bg-body
       form(method="post" action="/posts" name="message-form").container-fluid.row.g-3
